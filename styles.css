@@ -64,3 +64,20 @@ body {
     font-size: 1.2em;
     color: #ffcc00;
   }
+  /* Spinning Animation */
+@keyframes spinAnimation {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(180deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .spin {
+    animation: spinAnimation 3s linear infinite;
+  }
+  
