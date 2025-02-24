@@ -1,8 +1,8 @@
 // Sample data for items in the cases
 const items = [
-    { id: 1, name: "AK-47 | Redline", image: "item1.jpg" },
-    { id: 2, name: "M4A4 | Desolate Space", image: "item2.jpg" },
-    { id: 3, name: "AWP | Asiimov", image: "item3.jpg" },
+    { id: 1, name: "AK-47 | Redline", image: "https://external-preview.redd.it/106f9WUTW2W_QMR3eA7XKy6AKu-l3i3WUmkjYbXu08M.jpg?auto=webp&s=ed793a9c09ebd0a8e0e61ab7e0cff509a37f19d4" },
+    { id: 2, name: "M4A4 | Desolate Space", image: "https://i.pinimg.com/originals/75/5e/fc/755efc4eea5666e12effe6bfbda4e348.png" },
+    { id: 3, name: "AWP | Asiimov", image: "item3.jphttps://www.technetdeals.com/wp-content/uploads/2023/06/Asiimov-in-CS2.jpg" },
     // Add more items as needed
 ];
 
