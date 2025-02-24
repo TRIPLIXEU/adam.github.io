@@ -78,6 +78,7 @@ body {
   }
   
   .spin {
-    animation: spinAnimation 3s linear infinite;
+    animation: spinAnimation 1s ease-in-out; /* 1 second for the spinning effect */
   }
+  
   
