@@ -16,11 +16,11 @@ document.getElementById("palm").addEventListener("click", function() {
 
 
 const skins = [
-    { name: "AK-47 | Redline", image: "ak-redline-crafts-1-or-2-v0-na7wqe5373rc1.jpg" },
-    { name: "M4A4 | Howl", image: "8a7a5e48c6c9ed5da602a8b7bc2d5f9f-front.webp" },
-    { name: "AWP | Dragon Lore", image: "All-you-need-to-know-about-the-cs2-AWP-dragon-lore.jpg" },
-    { name: "Desert Eagle | Blaze", image: "playside.webp" },
-    { name: "Glock-18 | Fade", image: "dd5818-0f1e51bc6a30ded8228af29bb063fc76.webp" }
+    { name: "AK-47 | Redline", image: "img/redlineak47.jpg" },
+    { name: "M4A4 | Howl", image: "img/m4howl.webp" },
+    { name: "AWP | Dragon Lore", image: "img/awpdragon.jpg" },
+    { name: "Desert Eagle | Blaze", image: "img/deagle.webp" },
+    { name: "Glock-18 | Fade", image: "img/glockfade.webp" }
 ];
 
 document.getElementById("openCaseBtn").addEventListener("click", function() {

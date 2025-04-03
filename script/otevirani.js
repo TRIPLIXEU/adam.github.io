@@ -26,25 +26,25 @@ function openCase(caseNumber) {
 
     const cases = {
         1: {
-            "AK-47 Redline": "360fx360f (1).png",
-            "AWP Asiimov": "stahování.jpg",
-            "Glock-18 Fade": "dd5818-0f1e51bc6a30ded8228af29bb063fc76.webp",
-            "M4A4 Howl": "8a7a5e48c6c9ed5da602a8b7bc2d5f9f-front.webp",
-            "Karambit Doppler": "3439432594_preview_610.png"
+            "AK-47 Redline": "img/redlineak47.jpg",
+            "AWP Asiimov": "img/asimoovawp.jpg",
+            "Glock-18 Fade": "img/glockfade.webp",
+            "M4A4 Howl": "img/m4howl.webp",
+            "Karambit Doppler": "img/karambitlapis.png"
         },
         2: {
-            "M4A1-S Hyper Beast": "360fx360f.png",
-            "USP-S Orion": "6a8bf3298908b80db004e5438d0e3926-front.webp",
-            "Desert Eagle Blaze": "playside.webp",
-            "FAMAS Pulse": "wiki_Htt512l_preview.png",
-            "Butterfly Knife Fade": "3217528899_preview_99.png"
+            "M4A1-S Hyper Beast": "img/m4s.png",
+            "USP-S Orion": "img/usp.webp",
+            "Desert Eagle Blaze": "img/deagle.webp",
+            "FAMAS Pulse": "img/famas.png",
+            "Butterfly Knife Fade": "img/motylekfade.png"
         },
         3: {
-            "P90 Emerald Dragon": "p90.png",
-            "AWP Hyper Beast": "weapon_awp_cu_awp_hyper_beast_light_large.55efa5e3094af71ca6a56b6eac96cb022f7ecd8b.png",
-            "Five-SeveN Case Hardened": "2948645553_preview_278.png",
-            "MP7 Neon Rider": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou7umeldf0Ob3fDxBvYyJmoWEmeX9N77DqWZU7Mxkh6fHotzw2AXs_RU4ZWnxI4KccAU-NAvS-Vm6xOzthpe1v8yazCRn6Cdw-.png",
-            "Bayonet Crimson Web": "weapon_bayonet_hy_webs_light_large.9246001fd8c8b0c077dc2836ea7271a4a020750b.png"
+            "P90 Emerald Dragon": "img/p90.png",
+            "AWP Hyper Beast": "img/awphyperbeast.png",
+            "Five-SeveN Case Hardened": "img/fiveseven.png",
+            "MP7 Neon Rider": "img/mac10.png",
+            "Bayonet Crimson Web": "img/bayonetred.png"
         }
     };
 
