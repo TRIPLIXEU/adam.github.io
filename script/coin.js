@@ -6,9 +6,10 @@ function updateCoinCounter() {
 }
 
 // Initialize the sounds
-const palmSound = new Audio('path/to/palm-click.mp3');  // Replace with your palm-click sound file
-const caseSpinSound = new Audio('path/to/case-spinning.mp3');  // Replace with your case-spinning sound file
-const winSkinSound = new Audio('path/to/win-skin.mp3');  // Replace with your win-skin sound file
+const palmSound = new Audio('sound/coinclick.mp3');  // Replace with your palm-click sound file
+const caseSpinSound = new Audio('sound/caseroll.mp3');  // Replace with your case-spinning sound file
+const winSkinSound = new Audio('sound/happywheels.mp3');  // Replace with your win-skin sound file
+const notEnoughCoinsSound = new Audio('sound/error.mp3');  // Replace with your not-enough-coins sound file
 
 // Palm click event listener
 document.getElementById("palm").addEventListener("click", function() {
@@ -34,6 +35,9 @@ document.getElementById("openCaseBtn").addEventListener("click", function() {
     const skinResult = document.getElementById("skinResult");
 
     if (coins < 50) {
+        // Play the sound when there aren't enough coins
+        notEnoughCoinsSound.play();
+        
         skinResult.innerHTML = "❌ Nemáte dostatek coinů! (Potřebujete 50)";
         skinResult.style.color = "red";
         return;

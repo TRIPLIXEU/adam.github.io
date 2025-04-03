@@ -7,15 +7,19 @@ function updateCoinCounter() {
 }
 
 // Initialize the sounds
-const insufficientCoinsSound = new Audio('path/to/insufficient-coins.mp3');  // Sound for insufficient coins
-const caseSpinSound = new Audio('path/to/case-spinning.mp3');  // Sound when the case is spinning
-const winSkinSound = new Audio('path/to/win-skin.mp3');  // Sound when the user wins a skin
+const palmClickSound = new Audio('sound/coinclick.mp3');  // Sound for palm click
+const insufficientCoinsSound = new Audio('sound/error.mp3');  // Sound for insufficient coins
+const caseSpinSound = new Audio('sound/caseroll.mp3');  // Sound when the case is spinning
+const winSkinSound = new Audio('sound/happywheels.mp3');  // Sound when the user wins a skin
 
 // Klik na palmu přidává 1 coin
 document.querySelector(".palm").addEventListener("click", function() {
     coins++;
     localStorage.setItem("coins", coins);
     updateCoinCounter();
+    
+    // Play the sound when the palm is clicked
+    palmClickSound.play();
 });
 
 // Open case function
