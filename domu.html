@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Triplix Case Opening</title>
-    <link rel="icon" href="https://csgocases.com/uploads/gallery/oryginal/ba688495e129493a89c550b86221a884a6c2089a.png" type="image/icon type">
+    <link rel="icon" href="img/caseyellow.png" type="image/icon type">
     <link rel="stylesheet" href="styles.css">
 <head>
 <body>
@@ -20,8 +20,8 @@
         </nav>
     </header>
     <div class="palm-container">
-    <img src="pngimg.com - palm_tree_PNG93283.png" alt="Palma" class="palm" id="palm">
-    <img src="-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXU5A1PIYQNqhpOSV-fRPasw8rsUFJ5KBFZv668FFUxnaPLJz5H74y1xtTcz6etNumIx29U6Zd3j7yQoYih3lG1-UJqY27xJIeLMlhpaD9Aclo.png" alt="CSGO bedna" class="case">
+    <img src="img/pngimg.com - palm_tree_PNG93283.png" alt="Palma" class="palm" id="palm">
+    <img src="img/caseyellow.png" alt="CSGO bedna" class="case">
 </div>
 <div class="coin-counter" id="coinCounter">💰 0</div>
 
@@ -29,8 +29,8 @@
         <section class="hero">
             <h2>Otevři Cobblestone case a vyhraj vzácné skiny!</h2>
             <button id="openCaseBtn">Otevřít nyní</button>
-            <img class="case-image" src="1505297735111151616.webp" alt="Cobblestone Case">
-            <div id="skinResult" style="margin-top: 20px; font-size: 20px; color: #f39c12;"></div>
+            <img class="case-image" src="img/cobblecase.webp" alt="Cobblestone Case">
+            <div id="skinResult"></div>
         </section>
         
         <section class="about">
@@ -44,72 +44,10 @@
         <p>&copy; 2025 Triplix Case Opening. Všechna práva vyhrazena.</p>
     </footer>
 
-    <script>
-    
-    let coins = localStorage.getItem("coins") ? parseInt(localStorage.getItem("coins")) : 0;
 
-    
-    function updateCoinCounter() {
-        document.getElementById("coinCounter").innerText = `💰 ${coins}`;
-    }
-
-    
-    document.getElementById("palm").addEventListener("click", function() {
-        coins++;
-        localStorage.setItem("coins", coins); 
-        updateCoinCounter();
-    });
-
-    
-    const skins = [
-        { name: "AK-47 | Redline", image: "ak-redline-crafts-1-or-2-v0-na7wqe5373rc1.jpg" },
-        { name: "M4A4 | Howl", image: "8a7a5e48c6c9ed5da602a8b7bc2d5f9f-front.webp" },
-        { name: "AWP | Dragon Lore", image: "All-you-need-to-know-about-the-cs2-AWP-dragon-lore.jpg" },
-        { name: "Desert Eagle | Blaze", image: "playside.webp" },
-        { name: "Glock-18 | Fade", image: "dd5818-0f1e51bc6a30ded8228af29bb063fc76.webp" }
-    ];
-
-    document.getElementById("openCaseBtn").addEventListener("click", function() {
-        const skinResult = document.getElementById("skinResult");
-
-        
-        if (coins < 50) {
-            skinResult.innerHTML = "❌ Nemáte dostatek coinů! (Potřebujete 50)";
-            skinResult.style.color = "red";
-            return;
-        }
-
-        
-        coins -= 50;
-        localStorage.setItem("coins", coins);
-        updateCoinCounter();
-
-        let rollingInterval;
-        let counter = 0;
-
-        
-        skinResult.innerHTML = "🎲 Otevírání case...";
-        rollingInterval = setInterval(() => {
-            const randomSkin = skins[Math.floor(Math.random() * skins.length)];
-            skinResult.innerHTML = `<strong>${randomSkin.name}</strong><br><img src="${randomSkin.image}" alt="${randomSkin.name}" style="max-width: 150px; margin-top: 10px;">`;
-            counter++;
-        }, 100);
-
-        
-        setTimeout(() => {
-            clearInterval(rollingInterval);
-            const finalSkin = skins[Math.floor(Math.random() * skins.length)];
-            skinResult.innerHTML = `🎉 Gratulujeme! Získali jste: <strong>${finalSkin.name}</strong><br>
-                <img src="${finalSkin.image}" alt="${finalSkin.name}" style="max-width: 200px; margin-top: 10px;">`;
-        }, 2500);
-    });
-
-    
-    updateCoinCounter();
-</script>
 
     
 
-
+<script src="coin.js"></script>
 </body>
 </html>
