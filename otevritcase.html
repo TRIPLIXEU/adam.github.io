@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triplix Case Opening</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://csgocases.com/uploads/gallery/oryginal/ba688495e129493a89c550b86221a884a6c2089a.png" type="image/icon type">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #1e1e1e, #121212);
+            color: #fff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background: rgba(30, 30, 30, 0.9);
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #f39c12;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #ffcc70;
+        }
+        .cases {
+            padding: 40px;
+            flex-grow: 1;
+        }
+        .case-grid {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .case-item {
+            background: linear-gradient(45deg, #222, #333);
+            padding: 20px;
+            border-radius: 10px;
+            width: 150px;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .case-item img {
+            width: 100%;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+        .case-item:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 15px rgba(255, 165, 0, 0.4);
+        }
+        .result {
+            font-size: 20px;
+            margin-top: 20px;
+            padding: 10px;
+            background: rgba(30, 30, 30, 0.9);
+            border-radius: 8px;
+            display: inline-block;
+        }
+        .result img {
+            width: 200px;
+            display: block;
+            margin: 10px auto;
+            border-radius: 8px;
+        }
+        footer {
+            background: rgba(30, 30, 30, 0.9);
+            padding: 10px;
+            margin-top: auto;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>TripliX Case Opening</h1>
+        <nav>
+            <ul>
+                <li><a href="domu.html">Domů</a></li>
+                <li><a href="otevritcase.html">Otevřít Case</a></li>
+                <li><a href="https://cs.wikipedia.org/wiki/Druhá_světová_válka">Historie</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="palm-container">
+    <img src="pngimg.com - palm_tree_PNG93283.png" alt="Palma" class="palm">
+    <img src="-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXU5A1PIYQNqhpOSV-fRPasw8rsUFJ5KBFZv668FFUxnaPLJz5H74y1xtTcz6etNumIx29U6Zd3j7yQoYih3lG1-UJqY27xJIeLMlhpaD9Aclo.png" alt="CSGO bedna" class="case">
+</div>
+    
+<div class="coin-counter" id="coinCounter">💰 0</div>
+    
+    <section class="cases">
+        <h2>Dostupné Bedny</h2>
+        <div class="case-grid">
+            <div class="case-item" onclick="openCase(1)">
+                Bedna 1
+                <img src="crate_valve_1_png.png">
+            </div>
+            <div class="case-item" onclick="openCase(2)">
+                Bedna 2
+                <img src="-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXU5A1PIYQNqhpOSV-fRPasw8rsUFJ5KBFZv668FFUxnaPLJz5H74y1xtTcz6etNumIx29U6Zd3j7yQoYih3lG1-UJqY27xJIeLMlhpaD9Aclo.png">
+            </div>
+            <div class="case-item" onclick="openCase(3)">
+                Bedna 3
+                <img src="img_300x300.webp">
+            </div>
+        </div>
+    </section>
+    
+    <div class="result" id="result"></div>
+    
+    <footer>
+        <p>&copy; 2025 TripliX Case Opening. Všechna práva vyhrazena.</p>
+    </footer>
+    
+    <script>
+    // Načtení nebo inicializace coinů
+    let coins = localStorage.getItem("coins") ? parseInt(localStorage.getItem("coins")) : 0;
+
+    function updateCoinCounter() {
+        document.getElementById("coinCounter").innerText = `💰 ${coins}`;
+    }
+
+    // Klik na palmu přidává 1 coin
+    document.querySelector(".palm").addEventListener("click", function() {
+        coins++;
+        localStorage.setItem("coins", coins);
+        updateCoinCounter();
+    });
+
+    function openCase(caseNumber) {
+        if (coins < 50) {
+            document.getElementById("result").innerHTML = "❌ Nemáš dost coinů! (Potřebuješ 50)";
+            return;
+        }
+
+        // Odečítání 50 coinů
+        coins -= 50;
+        localStorage.setItem("coins", coins);
+        updateCoinCounter();
+
+        const cases = {
+            1: {
+                "AK-47 Redline": "360fx360f (1).png",
+                "AWP Asiimov": "stahování.jpg",
+                "Glock-18 Fade": "dd5818-0f1e51bc6a30ded8228af29bb063fc76.webp",
+                "M4A4 Howl": "8a7a5e48c6c9ed5da602a8b7bc2d5f9f-front.webp",
+                "Karambit Doppler": "3439432594_preview_610.png"
+            },
+            2: {
+                "M4A1-S Hyper Beast": "360fx360f.png",
+                "USP-S Orion": "6a8bf3298908b80db004e5438d0e3926-front.webp",
+                "Desert Eagle Blaze": "playside.webp",
+                "FAMAS Pulse": "wiki_Htt512l_preview.png",
+                "Butterfly Knife Fade": "3217528899_preview_99.png"
+            },
+            3: {
+                "P90 Emerald Dragon": "p90.png",
+                "AWP Hyper Beast": "weapon_awp_cu_awp_hyper_beast_light_large.55efa5e3094af71ca6a56b6eac96cb022f7ecd8b.png",
+                "Five-SeveN Case Hardened": "2948645553_preview_278.png",
+                "MP7 Neon Rider": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou7umeldf0Ob3fDxBvYyJmoWEmeX9N77DqWZU7Mxkh6fHotzw2AXs_RU4ZWnxI4KccAU-NAvS-Vm6xOzthpe1v8yazCRn6Cdw-.png",
+                "Bayonet Crimson Web": "weapon_bayonet_hy_webs_light_large.9246001fd8c8b0c077dc2836ea7271a4a020750b.png"
+            }
+        };
+
+        const selectedCase = cases[caseNumber];
+        const skinNames = Object.keys(selectedCase);
+        let index = 0;
+        const resultDiv = document.getElementById("result");
+
+        const interval = setInterval(() => {
+            resultDiv.innerText = "🎲 Točí se... " + skinNames[index];
+            index = (index + 1) % skinNames.length;
+        }, 100);
+
+        setTimeout(() => {
+            clearInterval(interval);
+            const randomSkin = skinNames[Math.floor(Math.random() * skinNames.length)];
+            resultDiv.innerHTML = `🎉 Vyhrál jsi: <strong>${randomSkin}</strong><br><img src="${selectedCase[randomSkin]}" alt="${randomSkin}">`;
+        }, 3000);
+    }
+
+    document.addEventListener("DOMContentLoaded", updateCoinCounter);
+</script>
+
+</body>
+</html>

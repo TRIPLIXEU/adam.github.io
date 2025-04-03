@@ -1,52 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Case Opening</title>
+    <title>Triplix Case Opening</title>
+    <link rel="icon" href="https://csgocases.com/uploads/gallery/oryginal/ba688495e129493a89c550b86221a884a6c2089a.png" type="image/icon type">
     <link rel="stylesheet" href="styles.css">
+
 </head>
 <body>
     <header>
-        <div class="logo">
-            <h1>Case Opening</h1>
-        </div>
+        <h1>Triplix Case Opening</h1>
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Cases</a></li>
-                <li><a href="#">Items</a></li>
-                <li><a href="#">Profile</a></li>
+                <li><a href="domu.html">Domů</a></li>
+                <li><a href="otevritcase.html">Otevřít Case</a></li>
+                <li><a href="https://cs.wikipedia.org/wiki/Druhá_světová_válka">Historie</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
             </ul>
         </nav>
     </header>
-    <section class="main-container">
-        <div class="case-section">
-            <h2>Open a Case</h2>
-            <div class="cases">
-                <div class="case" id="case1">
-                    <img src="https://vignette.wikia.nocookie.net/cswikia/images/1/14/EMS-Katowice-2014-Legends.png/revision/latest/scale-to-width-down/180?cb=20140521184222" alt="Case 1">
-                    <p>Case 1</p>
-                    <button onclick="openCase(1)">Open</button>
-                </div>
-                <div class="case" id="case2">
-                    <img src="https://tse3.mm.bing.net/th?id=OIP.C8ghBCbwelNWTddadZZ2RAAAAA&pid=Api&P=0&h=220" alt="Case 2">
-                    <p>Case 2</p>
-                    <button onclick="openCase(2)">Open</button>
-                </div>
+    
+    <main>
+        <section class="hero">
+            <h2>Otevři Cobblestone case a vyhraj vzácné skiny!</h2>
+            <button>Otevřít nyní</button>
+        </section>
+        
+        <section class="about">
+            <h2>O nás</h2>
+            <p>TripliX Case Opening je webová stránka, která vám umožňuje otevírat virtuální bedny s možností získání vzácných skinů do hry Counter-Strike 2. Vše je spravedlivé a transparentní!</p>
+        </section>
+        
+        <section class="cases">
+            <h2>Dostupné Bedny</h2>
+            <div class="case-grid">
+                <div class="case-item">Bedna 1</div>
+                <div class="case-item">Bedna 2</div>
+                <div class="case-item">Bedna 3</div>
             </div>
-        </div>
-        <div class="item-section">
-            <h2>Items</h2>
-            <div class="items" id="itemList">
-                <!-- Items will appear here dynamically -->
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
+    
     <footer>
-        <p>&copy; 2025 Case Opening Platform</p>
+        <p>&copy; 2025 Triplix Case Opening. Všechna práva vyhrazena.</p>
     </footer>
-
-    <script src="triplix.js"></script>
 </body>
 </html>

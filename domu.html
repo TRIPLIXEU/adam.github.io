@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triplix Case Opening</title>
+    <link rel="icon" href="https://csgocases.com/uploads/gallery/oryginal/ba688495e129493a89c550b86221a884a6c2089a.png" type="image/icon type">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #1e1e1e, #121212);
+            color: #fff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background: rgba(30, 30, 30, 0.9);
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #f39c12;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #ffcc70;
+        }
+        .hero {
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .hero h2 {
+            font-size: 28px;
+        }
+        .hero button {
+            background: linear-gradient(45deg, #f39c12, #ff5733);
+            color: #fff;
+            padding: 12px 24px;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: transform 0.2s, box-shadow 0.3s;
+            margin-top: 20px;
+        }
+        .hero button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(255, 165, 0, 0.4);
+        }
+        .case-image {
+            margin-top: 20px;
+            width: 200px;
+        }
+        .about {
+            padding: 40px;
+            background: rgba(30, 30, 30, 0.9);
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .about h2 {
+            color: #f39c12;
+        }
+        footer {
+            background: rgba(30, 30, 30, 0.9);
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>TripliX Case Opening</h1>
+        <nav>
+            <ul>
+                <li><a href="domu.html">Domů</a></li>
+                <li><a href="otevritcase.html">Otevřít Case</a></li>
+                <li><a href="https://cs.wikipedia.org/wiki/Druhá_světová_válka">Historie</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="palm-container">
+    <img src="pngimg.com - palm_tree_PNG93283.png" alt="Palma" class="palm" id="palm">
+    <img src="-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXU5A1PIYQNqhpOSV-fRPasw8rsUFJ5KBFZv668FFUxnaPLJz5H74y1xtTcz6etNumIx29U6Zd3j7yQoYih3lG1-UJqY27xJIeLMlhpaD9Aclo.png" alt="CSGO bedna" class="case">
+</div>
+<div class="coin-counter" id="coinCounter">💰 0</div>
+
+    <main>
+        <section class="hero">
+            <h2>Otevři Cobblestone case a vyhraj vzácné skiny!</h2>
+            <button id="openCaseBtn">Otevřít nyní</button>
+            <img class="case-image" src="1505297735111151616.webp" alt="Cobblestone Case">
+            <div id="skinResult" style="margin-top: 20px; font-size: 20px; color: #f39c12;"></div>
+        </section>
+        
+        <section class="about">
+            <h2>O nás</h2>
+            <p>TripliX Case Opening je webová stránka, která vám umožňuje otevírat virtuální bedny s možností získání vzácných skinů do hry Counter-Strike 2. Vše je spravedlivé a transparentní!</p>
+        </section>
+        
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Triplix Case Opening. Všechna práva vyhrazena.</p>
+    </footer>
+
+    <script>
+    
+    let coins = localStorage.getItem("coins") ? parseInt(localStorage.getItem("coins")) : 0;
+
+    
+    function updateCoinCounter() {
+        document.getElementById("coinCounter").innerText = `💰 ${coins}`;
+    }
+
+    
+    document.getElementById("palm").addEventListener("click", function() {
+        coins++;
+        localStorage.setItem("coins", coins); 
+        updateCoinCounter();
+    });
+
+    
+    const skins = [
+        { name: "AK-47 | Redline", image: "ak-redline-crafts-1-or-2-v0-na7wqe5373rc1.jpg" },
+        { name: "M4A4 | Howl", image: "8a7a5e48c6c9ed5da602a8b7bc2d5f9f-front.webp" },
+        { name: "AWP | Dragon Lore", image: "All-you-need-to-know-about-the-cs2-AWP-dragon-lore.jpg" },
+        { name: "Desert Eagle | Blaze", image: "playside.webp" },
+        { name: "Glock-18 | Fade", image: "dd5818-0f1e51bc6a30ded8228af29bb063fc76.webp" }
+    ];
+
+    document.getElementById("openCaseBtn").addEventListener("click", function() {
+        const skinResult = document.getElementById("skinResult");
+
+        
+        if (coins < 50) {
+            skinResult.innerHTML = "❌ Nemáte dostatek coinů! (Potřebujete 50)";
+            skinResult.style.color = "red";
+            return;
+        }
+
+        
+        coins -= 50;
+        localStorage.setItem("coins", coins);
+        updateCoinCounter();
+
+        let rollingInterval;
+        let counter = 0;
+
+        
+        skinResult.innerHTML = "🎲 Otevírání case...";
+        rollingInterval = setInterval(() => {
+            const randomSkin = skins[Math.floor(Math.random() * skins.length)];
+            skinResult.innerHTML = `<strong>${randomSkin.name}</strong><br><img src="${randomSkin.image}" alt="${randomSkin.name}" style="max-width: 150px; margin-top: 10px;">`;
+            counter++;
+        }, 100);
+
+        
+        setTimeout(() => {
+            clearInterval(rollingInterval);
+            const finalSkin = skins[Math.floor(Math.random() * skins.length)];
+            skinResult.innerHTML = `🎉 Gratulujeme! Získali jste: <strong>${finalSkin.name}</strong><br>
+                <img src="${finalSkin.image}" alt="${finalSkin.name}" style="max-width: 200px; margin-top: 10px;">`;
+        }, 2500);
+    });
+
+    
+    updateCoinCounter();
+</script>
+
+    
+
+
+</body>
+</html>
