@@ -4,26 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Triplix Case Opening</title>
-    <link rel="icon" href="https://csgocases.com/uploads/gallery/oryginal/ba688495e129493a89c550b86221a884a6c2089a.png" type="image/icon type">
+    <link rel="icon" href="img/caseyellow.png" type="image/icon type">
     <link rel="stylesheet" href="styles.css">
-</head>
+<head>
 <body>
     <header>
-        <h1>Triplix Case Opening</h1>
+        <h1>TripliX Case Opening</h1>
         <nav>
             <ul>
-                <li><a href="domu.html">Domů</a></li>
+                <li><a href="index.html">Domů</a></li>
                 <li><a href="otevritcase.html">Otevřít Case</a></li>
                 <li><a href="https://cs.wikipedia.org/wiki/Druhá_světová_válka">Historie</a></li>
                 <li><a href="kontakt.html">Kontakt</a></li>
             </ul>
         </nav>
     </header>
-    
+    <div class="palm-container">
+    <img src="img/pngimg.com - palm_tree_PNG93283.png" alt="Palma" class="palm" id="palm">
+    <img src="img/caseyellow.png" alt="CSGO bedna" class="case">
+</div>
+<div class="coin-counter" id="coinCounter">💰 0</div>
+
     <main>
         <section class="hero">
             <h2>Otevři Cobblestone case a vyhraj vzácné skiny!</h2>
-            <button>Otevřít nyní</button>
+            <button id="openCaseBtn">Otevřít nyní</button>
+            <img class="case-image" src="img/cobblecase.webp" alt="Cobblestone Case">
+            <div id="skinResult"></div>
         </section>
         
         <section class="about">
@@ -31,18 +38,16 @@
             <p>TripliX Case Opening je webová stránka, která vám umožňuje otevírat virtuální bedny s možností získání vzácných skinů do hry Counter-Strike 2. Vše je spravedlivé a transparentní!</p>
         </section>
         
-        <section class="cases">
-            <h2>Dostupné Bedny</h2>
-            <div class="case-grid">
-                <div class="case-item">Bedna 1</div>
-                <div class="case-item">Bedna 2</div>
-                <div class="case-item">Bedna 3</div>
-            </div>
-        </section>
     </main>
     
     <footer>
         <p>&copy; 2025 Triplix Case Opening. Všechna práva vyhrazena.</p>
     </footer>
+
+
+
+    
+
+<script src="coin.js"></script>
 </body>
 </html>
